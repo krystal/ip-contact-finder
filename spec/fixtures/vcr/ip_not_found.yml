@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://rdap.db.ripe.net/ip/245.2.2.1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - IP Contact Finder/0.0.0.dev
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Thu, 19 May 2022 14:02:58 GMT
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/rdap+json
+      Content-Length:
+      - '648'
+      Server:
+      - Jetty(10.0.7)
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "links" : [ {
+            "value" : "http://www.ripe.net/data-tools/support/documentation/terms",
+            "rel" : "copyright",
+            "href" : "http://www.ripe.net/data-tools/support/documentation/terms"
+          } ],
+          "rdapConformance" : [ "rdap_level_0" ],
+          "notices" : [ {
+            "title" : "Terms and Conditions",
+            "description" : [ "This is the RIPE Database query service. The objects are in RDAP format." ],
+            "links" : [ {
+              "rel" : "terms-of-service",
+              "href" : "http://www.ripe.net/db/support/db-terms-conditions.pdf",
+              "type" : "application/pdf"
+            } ]
+          } ],
+          "port43" : "whois.ripe.net",
+          "errorCode" : 404,
+          "title" : "not found"
+        }
+  recorded_at: Thu, 19 May 2022 14:02:58 GMT
+recorded_with: VCR 6.1.0

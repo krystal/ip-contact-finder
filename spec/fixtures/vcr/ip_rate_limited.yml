@@ -1,0 +1,36 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://rdap.db.ripe.net/ip/185.22.208.0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - IP Contact Finder/0.0.0.dev
+  response:
+    status:
+      code: 429
+      message: Rate Limited
+    headers:
+      Date:
+      - Thu, 19 May 2022 14:03:31 GMT
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/rdap+json
+      Content-Length:
+      - '2574'
+      Server:
+      - Jetty(10.0.7)
+    body:
+      encoding: UTF-8
+      string: |-
+        {}
+  recorded_at: Thu, 19 May 2022 14:03:31 GMT
+recorded_with: VCR 6.1.0
