@@ -5,7 +5,7 @@ This is a simple tool that uses RDAP to determine an array of authoritative emai
 ## Installation
 
 ```ruby
-gem 'ip-contact-finder', '~> 1.0'
+gem 'ip_contact_finder', '~> 1.0'
 ```
 
 ## Usage
