@@ -4,6 +4,7 @@ require 'net/http'
 require 'uri'
 require 'json'
 require 'ip_contact_finder/error'
+require 'ip_contact_finder/version'
 
 module IPContactFinder
   class RDAP
