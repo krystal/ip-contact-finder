@@ -55,6 +55,7 @@ module IPContactFinder
 
       @logger&.info "Making request to #{uri}"
 
+      http.start
       response = http.request(request)
       @logger&.info "Got response #{response.code}"
 
@@ -74,6 +75,8 @@ module IPContactFinder
     rescue SocketError, Errno::ECONNRESET, EOFError, Errno::EINVAL, Errno::ENETUNREACH, Errno::EHOSTUNREACH,
            Errno::ECONNREFUSED, OpenSSL::SSL::SSLError, Timeout::Error => e
       raise RequestError, "#{e.message} (#{e.class})"
+    ensure
+      http.finish
     end
   end
 end
